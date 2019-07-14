@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@android:style/Theme.Material.NoActionBar.Fullscreen"
+    android:orientation="vertical">
+    
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:padding="@dimen/abc_action_bar_content_inset_material"
+        android:id="@+id/logo"
+        android:src="@drawable/pinterest"/>    
+   
+    <TextView
+        android:textColor="@color/material_grey_600"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Log in to see more"
+        android:textSize="28dp"
+        android:textAlignment="center"
+        android:layout_marginBottom="16dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/myEmail"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:hint="Email or phone number"
+        android:textStyle="bold"/>
+                
+    <EditText
+        android:id="@+id/myPassword"
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:hint="Password"
+        android:textStyle="bold"
+        android:inputType="textPassword"
+        android:layout_marginBottom="10dp"/>
+    
+    <Button
+        android:id="@+id/logIn_button1"
+        android:background="@android:color/holo_red_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:padding="16dp"
+        android:textColor="@android:color/white"
+        android:text="Log in"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:textColor="@android:color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:text="OR"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="@dimen/abc_action_bar_content_inset_material"
+        android:textStyle="bold" 
+        android:textAlignment="center"/>
+        
+   
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3b5998"            
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <ImageView 
+            android:layout_width="50dp"
+            android:layout_height="50dp"               
+            android:clickable="false"                
+            android:src="@drawable/icon_fb"/>
+
+        <TextView        
+            android:layout_width="match_parent"
+            android:layout_height="50dp" 
+            android:clickable="false"
+            android:textSize="16dp"
+            android:gravity="center"                
+            android:text="Continue with Facebook"
+            android:textColor="#ffffff"/>    
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_dark"            
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <ImageView 
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="8dp"
+            android:clickable="false"                
+            android:src="@drawable/icon_google"/>
+
+        <TextView        
+            android:layout_width="match_parent"
+            android:layout_height="50dp" 
+            android:clickable="false"
+            android:textSize="16dp"
+            android:gravity="center"                
+            android:text="Continue with Google"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:textColor="@color/material_grey_600"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:text="Forgot your password?"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:textColor="@color/material_grey_600"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:text="Are you a buisness? Get started here"
+        android:textAlignment="center"
+        android:layout_marginBottom="10dp"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="140dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"            
+        android:layout_marginLeft="64dp"
+        android:layout_marginRight="64dp"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:textColor="@color/material_grey_600"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"            
+            android:text="Not on Pinterest yet?"/>
+
+        <Button
+            android:textColor="@android:color/black"
+            android:text="Sign Up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false" 
+            android:background="@drawable/abc_btn_borderless_material"
+            android:id="@+id/signUp_Button"/>
+
+    </LinearLayout>
+
+</LinearLayout>

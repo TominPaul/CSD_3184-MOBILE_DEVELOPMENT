@@ -98,7 +98,7 @@ namespace Assignment_1
         public string[] getList()
         {
             string[] ListUsers; int i = 0;
-            string selQuery = string.Format("select * from {0}", tableName);
+            string selQuery = string.Format("SELECT * FROM {0}", tableName);
             ICursor myResult = connectionObj.RawQuery(selQuery, null);
             ListUsers = new string[myResult.Count];
 
@@ -115,13 +115,28 @@ namespace Assignment_1
             Console.WriteLine(updateQuery);
             connectionObj.ExecSQL(updateQuery);
         }
+        public string[] getUserData(string email)
+        {
+            string selectUserQuery = string.Format("SELECT * FROM {0} WHERE {1} = '"+ email +"'", tableName, userEmail);
+            Console.WriteLine(selectUserQuery);
+            ICursor myResult = connectionObj.RawQuery(selectUserQuery, null);
+            string[] userInfo = new string[4];
 
-        public void deleteUser(string email_id)
+            while (myResult.MoveToNext())
+            {
+                userInfo[0] = myResult.GetString(myResult.GetColumnIndexOrThrow("Name"));
+                userInfo[1] = myResult.GetString(myResult.GetColumnIndexOrThrow("Email"));
+                userInfo[2] = myResult.GetString(myResult.GetColumnIndexOrThrow("Password"));
+                userInfo[3] = myResult.GetString(myResult.GetColumnIndexOrThrow("Age"));
+            }
+            return userInfo;
+        }
+        /*public void deleteUser(string email_id)
         {
             string deleteQuery = string.Format("delete from {0} where {1} = '" + email_id + "'", tableName, userEmail);
             Console.WriteLine(deleteQuery);
             connectionObj.ExecSQL(deleteQuery);
-        }
+        }*/
 
         public override void OnUpgrade(SQLiteDatabase db, int oldVersion, int newVersion)
         {

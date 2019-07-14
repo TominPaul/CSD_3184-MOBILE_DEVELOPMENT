@@ -25,25 +25,25 @@ namespace Assignment_1
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
-            
+            base.OnCreate(savedInstanceState);            
             SetContentView(Resource.Layout.activity_logIn);
             myDB = new DBHelperClass(this);
             alert = new Android.App.AlertDialog.Builder(this);
+
             name = Intent.GetStringExtra("userName");            
             email = Intent.GetStringExtra("userEmail");
-            age = Intent.GetStringExtra("userAge");
             password = Intent.GetStringExtra("userPassword");
+            age = Intent.GetStringExtra("userAge");
 
             userName = FindViewById<EditText>(Resource.Id.displayName);
-            userAge = FindViewById<EditText>(Resource.Id.displayAge);
             userEmail = FindViewById<EditText>(Resource.Id.displayEmail);
             userPassword = FindViewById<EditText>(Resource.Id.displayPassword);
+            userAge = FindViewById<EditText>(Resource.Id.displayAge);
 
             userName.Text = name;            
-            userAge.Text = age;
             userEmail.Text = email;
             userPassword.Text = password;
+            userAge.Text = age;
 
             btn_save = FindViewById<Button>(Resource.Id.btnEditProfile);
             btn_listUser = FindViewById<Button>(Resource.Id.btnListOfUsers);

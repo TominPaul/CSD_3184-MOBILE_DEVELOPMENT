@@ -3315,17 +3315,17 @@ namespace Assignment_1
 			// aapt resource value: 0x7F0C000D
 			public const int browser_actions_menu_view = 2131492877;
 			
-			// aapt resource value: 0x7F030008
-			public const int btnBack = 2130903048;
+			// aapt resource value: 0x7F020010
+			public const int btnBack = 2130837520;
 			
-			// aapt resource value: 0x7F030006
-			public const int btnEditProfile = 2130903046;
+			// aapt resource value: 0x7F020008
+			public const int btnEditProfile = 2130837512;
 			
-			// aapt resource value: 0x7F030007
-			public const int btnListOfUsers = 2130903047;
+			// aapt resource value: 0x7F020009
+			public const int btnListOfUsers = 2130837513;
 			
-			// aapt resource value: 0x7F030019
-			public const int btnSignUp = 2130903065;
+			// aapt resource value: 0x7F020021
+			public const int btnSignUp = 2130837537;
 			
 			// aapt resource value: 0x7F0C001A
 			public const int buttonPanel = 2131492890;
@@ -3378,20 +3378,20 @@ namespace Assignment_1
 			// aapt resource value: 0x7F0C002A
 			public const int design_navigation_view = 2131492906;
 			
-			// aapt resource value: 0x7F030005
-			public const int displayAge = 2130903045;
+			// aapt resource value: 0x7F020007
+			public const int displayAge = 2130837511;
 			
-			// aapt resource value: 0x7F030003
-			public const int displayEmail = 2130903043;
+			// aapt resource value: 0x7F020005
+			public const int displayEmail = 2130837509;
 			
-			// aapt resource value: 0x7F030002
-			public const int displayName = 2130903042;
+			// aapt resource value: 0x7F020004
+			public const int displayName = 2130837508;
 			
-			// aapt resource value: 0x7F030004
-			public const int displayPassword = 2130903044;
+			// aapt resource value: 0x7F020006
+			public const int displayPassword = 2130837510;
 			
-			// aapt resource value: 0x7F030013
-			public const int divider = 2130903059;
+			// aapt resource value: 0x7F020015
+			public const int divider = 2130837525;
 			
 			// aapt resource value: 0x7F0C002B
 			public const int edit_query = 2131492907;
@@ -3438,17 +3438,17 @@ namespace Assignment_1
 			// aapt resource value: 0x7F0C000C
 			public const int info = 2131492876;
 			
-			// aapt resource value: 0x7F030018
-			public const int inputAge = 2130903064;
+			// aapt resource value: 0x7F020020
+			public const int inputAge = 2130837536;
 			
-			// aapt resource value: 0x7F030016
-			public const int inputEmail = 2130903062;
+			// aapt resource value: 0x7F020018
+			public const int inputEmail = 2130837528;
 			
-			// aapt resource value: 0x7F030015
-			public const int inputName = 2130903061;
+			// aapt resource value: 0x7F020017
+			public const int inputName = 2130837527;
 			
-			// aapt resource value: 0x7F030017
-			public const int inputPassword = 2130903063;
+			// aapt resource value: 0x7F020019
+			public const int inputPassword = 2130837529;
 			
 			// aapt resource value: 0x7F0C000D
 			public const int italic = 2131492877;
@@ -3471,20 +3471,23 @@ namespace Assignment_1
 			// aapt resource value: 0x7F0C000F
 			public const int line3 = 2131492879;
 			
-			// aapt resource value: 0x7F030020
-			public const int link_login = 2130903072;
+			// aapt resource value: 0x7F020022
+			public const int link_login = 2130837538;
 			
 			// aapt resource value: 0x7F0C0041
 			public const int listMode = 2131492929;
 			
+			// aapt resource value: 0x7F020003
+			public const int listUsers = 2130837507;
+			
 			// aapt resource value: 0x7F0C0042
 			public const int list_item = 2131492930;
 			
-			// aapt resource value: 0x7F030012
-			public const int logIn_button1 = 2130903058;
+			// aapt resource value: 0x7F020014
+			public const int logIn_button1 = 2130837524;
 			
-			// aapt resource value: 0x7F030009
-			public const int logo = 2130903049;
+			// aapt resource value: 0x7F020011
+			public const int logo = 2130837521;
 			
 			// aapt resource value: 0x7F0C0043
 			public const int masked = 2131492931;
@@ -3504,11 +3507,11 @@ namespace Assignment_1
 			// aapt resource value: 0x7F0C0048
 			public const int multiply = 2131492936;
 			
-			// aapt resource value: 0x7F030010
-			public const int myEmail = 2130903056;
+			// aapt resource value: 0x7F020012
+			public const int myEmail = 2130837522;
 			
-			// aapt resource value: 0x7F030011
-			public const int myPassword = 2130903057;
+			// aapt resource value: 0x7F020013
+			public const int myPassword = 2130837523;
 			
 			// aapt resource value: 0x7F0C0049
 			public const int navigation_header_container = 2131492937;
@@ -3585,6 +3588,9 @@ namespace Assignment_1
 			// aapt resource value: 0x7F0C0060
 			public const int scrollView = 2131492960;
 			
+			// aapt resource value: 0x7F020002
+			public const int searchBtn = 2130837506;
+			
 			// aapt resource value: 0x7F0C0062
 			public const int search_badge = 2131492962;
 			
@@ -3624,8 +3630,8 @@ namespace Assignment_1
 			// aapt resource value: 0x7F0C006E
 			public const int shortcut = 2131492974;
 			
-			// aapt resource value: 0x7F030014
-			public const int signUp_Button = 2130903060;
+			// aapt resource value: 0x7F020016
+			public const int signUp_Button = 2130837526;
 			
 			// aapt resource value: 0x7F0C006F
 			public const int smallLabel = 2131492975;
@@ -3933,20 +3939,20 @@ namespace Assignment_1
 			// aapt resource value: 0x7F0F001C
 			public const int abc_tooltip = 2131689500;
 			
-			// aapt resource value: 0x7F020002
-			public const int activity_listOfUsers = 2130837506;
+			// aapt resource value: 0x7F030002
+			public const int activity_listOfUsers = 2130903042;
 			
-			// aapt resource value: 0x7F020003
-			public const int activity_logIn = 2130837507;
+			// aapt resource value: 0x7F030003
+			public const int activity_logIn = 2130903043;
 			
-			// aapt resource value: 0x7F020004
-			public const int activity_main = 2130837508;
+			// aapt resource value: 0x7F030004
+			public const int activity_main = 2130903044;
 			
-			// aapt resource value: 0x7F020005
-			public const int activity_signUp = 2130837509;
+			// aapt resource value: 0x7F030005
+			public const int activity_signUp = 2130903045;
 			
-			// aapt resource value: 0x7F020006
-			public const int activity_userProfile = 2130837510;
+			// aapt resource value: 0x7F030006
+			public const int activity_userProfile = 2130903046;
 			
 			// aapt resource value: 0x7F0F0001
 			public const int browser_actions_context_menu_page = 2131689473;

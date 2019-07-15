@@ -16,11 +16,11 @@ namespace Assignment_1
     public class ProfileActivity : Activity
     {
         string[] userData = new string[4];
-        string userName;
+        string myName;
 
         DBHelperClass myDB;
 
-        EditText myName, myEmail, myPassword, myAge;
+        EditText userName, userEmail, userPassword, userAge;
         Button btn_Back;
 
         protected override void OnCreate(Bundle savedInstanceState)
@@ -28,20 +28,25 @@ namespace Assignment_1
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.activity_userProfile);
 
-            myDB = new DBHelperClass(this);
-            myName = FindViewById<EditText>(Resource.Id.displayName);
-            myEmail = FindViewById<EditText>(Resource.Id.displayEmail);
-            myPassword = FindViewById<EditText>(Resource.Id.displayPassword);
-            myAge = FindViewById<EditText>(Resource.Id.displayAge);
+            userName = FindViewById<EditText>(Resource.Id.displayName);
+            userEmail = FindViewById<EditText>(Resource.Id.displayEmail);
+            userPassword = FindViewById<EditText>(Resource.Id.displayPassword);
+            userAge = FindViewById<EditText>(Resource.Id.displayAge);
             btn_Back = FindViewById<Button>(Resource.Id.btnBack);
 
-            userName = Intent.GetStringExtra(myEmail.Text);
-            userData = myDB.getUserData(userName);
+            myDB = new DBHelperClass(this);
+            myName = Intent.GetStringExtra("userName");
+            userData = myDB.getUserData(myName);
 
-            myName.Text = userData[0];
-            myEmail.Text = userData[1];
-            myAge.Text = userData[2];
-            myPassword.Text = userData[3];
+            userName.Text = userData[0];
+            userEmail.Text = userData[1];
+            userPassword.Text = userData[2];
+            userAge.Text = userData[3];            
+
+            userName.Enabled = false;
+            userEmail.Enabled = false;
+            userPassword.Enabled = false;
+            userAge.Enabled = false;
 
             btn_Back.Click += backToList;
         }

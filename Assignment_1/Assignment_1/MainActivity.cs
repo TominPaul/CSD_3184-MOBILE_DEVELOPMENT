@@ -55,12 +55,12 @@ namespace Assignment_1
                     if (myDB.checkUser(value1, value2))
                     {
                         string[] userData = myDB.getUserData(value1, value2);
+
                         Intent newScreen = new Intent(this, typeof(LogInActivity));
                         newScreen.PutExtra("userName", userData[0]);                        
                         newScreen.PutExtra("userEmail", userData[1]);
                         newScreen.PutExtra("userPassword", userData[2]);
                         newScreen.PutExtra("userAge", userData[3]);
-
                         StartActivity(newScreen);
                     }
                     else

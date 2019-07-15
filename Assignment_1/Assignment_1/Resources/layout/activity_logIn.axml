@@ -65,16 +65,37 @@
             android:inputType="number"
             android:hint="Age" />
 
-        <!-- Edit Button -->
-        <Button
-            android:id="@+id/btnEditProfile"
-            android:textColor="@android:color/white"
-            android:background="@android:color/holo_red_dark"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"            
-            android:padding="12dp"
-            android:text="SAVE"/>
+        <!-- Edit & Save Button -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnEditProfile"
+                android:textColor="@android:color/white"
+                android:background="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"            
+                android:padding="12dp"
+                android:layout_marginRight="6dp"
+                android:text="EDIT"/>
+
+            <Button
+                android:id="@+id/btnSaveProfile"
+                android:textColor="@android:color/white"
+                android:background="@android:color/holo_red_dark"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"            
+                android:padding="12dp"
+                android:layout_marginLeft="6dp"
+                android:text="SAVE"/>
+
+        </LinearLayout>
 
         <!-- List Button -->
         <Button

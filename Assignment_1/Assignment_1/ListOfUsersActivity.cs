@@ -27,7 +27,6 @@ namespace Assignment_1
             base.OnCreate(savedInstanceState);
 
             SetContentView(Resource.Layout.activity_listOfUsers);
-            myDB = new DBHelperClass(this);
 
             // Create your application here
             mySearch = FindViewById<SearchView>(Resource.Id.searchBtn);
@@ -49,6 +48,9 @@ namespace Assignment_1
         {
             Intent userScreen = new Intent(this, typeof(ProfileActivity)); // on success loading signup page   
             userScreen.PutExtra("userName", users[e.Position]);
+            userScreen.PutExtra("userEmail", users[e.Position]);
+            userScreen.PutExtra("userPassword", users[e.Position]);
+            userScreen.PutExtra("userAge", users[e.Position]);
             StartActivity(userScreen);
         }
         public void userSearch(object sender, SearchView.QueryTextChangeEventArgs e)

@@ -15,8 +15,8 @@ namespace Assignment_1
     [Activity(Label = "LogInActivity")]
     public class LogInActivity : Activity
     {
-        Button btn_home, btn_save, btn_listUser;
         EditText userName, userAge, userEmail, userPassword;
+        Button btn_home, btn_edit, btn_save, btn_listUser;
 
         DBHelperClass myDB;
         Android.App.AlertDialog.Builder alert;
@@ -40,17 +40,25 @@ namespace Assignment_1
             userPassword = FindViewById<EditText>(Resource.Id.displayPassword);
             userAge = FindViewById<EditText>(Resource.Id.displayAge);
 
-            userName.Text = name;            
-            userEmail.Text = email;
-            userPassword.Text = password;
-            userAge.Text = age;
-
-            btn_save = FindViewById<Button>(Resource.Id.btnEditProfile);
+            btn_edit = FindViewById<Button>(Resource.Id.btnEditProfile);
+            btn_save = FindViewById<Button>(Resource.Id.btnSaveProfile);
             btn_listUser = FindViewById<Button>(Resource.Id.btnListOfUsers);
             btn_home = FindViewById<Button>(Resource.Id.btnBack);
 
+            userName.Text = name;            
+            userEmail.Text = email;            
+            userPassword.Text = password;            
+            userAge.Text = age;
+
+            userName.Enabled = false;
+            userEmail.Enabled = false;
+            userPassword.Enabled = false;
+            userAge.Enabled = false;
+            btn_save.Enabled = false;
+
             // Click events
-            btn_save.Click += editBtnClickEvent;
+            btn_edit.Click += editBtnClickEvent;
+            btn_save.Click += saveBtnClickEvent;
             btn_home.Click += backBtnClickEvent;
             btn_listUser.Click += listUsersClickEvent;
         }
@@ -67,7 +75,7 @@ namespace Assignment_1
             StartActivity(loginScreen);
         }
 
-        public void editBtnClickEvent(object sender, EventArgs e)
+        public void saveBtnClickEvent(object sender, EventArgs e)
         {
             alert.SetTitle("Error");
             if (userName.Text.Trim().Equals("") || userName.Text.Length < 0 || userAge.Text.Trim().Equals("") || userAge.Text.Length < 0 || userEmail.Text.Trim().Equals("") || userEmail.Text.Length < 0 || userPassword.Text.Trim().Equals("") || userPassword.Text.Length < 0)
@@ -95,6 +103,15 @@ namespace Assignment_1
                 Dialog myDialog = alert.Create();
                 myDialog.Show();
             }
+        }
+
+        public void editBtnClickEvent(object sender, EventArgs e)
+        {
+            userName.Enabled = true;
+            userEmail.Enabled = true;
+            userPassword.Enabled = true;
+            userAge.Enabled = true;
+            btn_save.Enabled = true;
         }
 
         public void alertOKButton(object sender, Android.Content.DialogClickEventArgs e)
